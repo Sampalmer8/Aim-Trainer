@@ -44,7 +44,7 @@ class Vector {
 }
 
 let ctx;
-let canvas;
+let canvas = document.getElementById("myCanvas");
 let time;
 let position = new Vector(500, 500); // Pixels
 let start = new Vector(Infinity, Infinity); // Pixels
@@ -79,19 +79,19 @@ function setup() {
 
 function drawBall(position) {
     if (position.x < 0) {
-        position.x = 500;
+        position.x = 400;
     }
 
     if (position.y < 0) {
-        position.y = 500;
+        position.y = 400;
     }
 
     if (position.x > canvas.width) {
-        position.x = 500;
+        position.x = 400;
     }
 
     if (position.y > canvas.width) {
-        position.y = 500;
+        position.y = 400;
     }
     ctx.save();
     {
